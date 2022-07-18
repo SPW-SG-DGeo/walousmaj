@@ -1,0 +1,8 @@
+name: walous_env
+dependencies:
+  - conda-forge::geopandas=0.9.0
+  - conda-forge::rasterio=1.2.0
+  - conda-forge::shapely==1.7.1
+  - conda-forge::gdal==3.1.4
+  - conda-forge::pyproj==3.2.1
+  - python=3.7

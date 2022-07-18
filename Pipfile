@@ -1,0 +1,22 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+
+[packages]
+affine = "==2.3.0"
+aiofiles = "==0.7.0"
+detectron2 = {version="==0.4+cu110", file="https://dl.fbaipublicfiles.com/detectron2/wheels/cu110/torch1.7/detectron2-0.4%2Bcu110-cp37-cp37m-linux_x86_64.whl"}
+fastapi = "==0.68.1"
+jinja2 = "==3.0.1"
+numpy = "==1.20.2"
+pydantic = "==1.8.2"
+python-multipart = "==0.0.5"
+pyyaml = "==5.4.1"
+torch = {file="https://download.pytorch.org/whl/cu110/torch-1.7.1%2Bcu110-cp37-cp37m-linux_x86_64.whl"}
+torchaudio = {file="https://download.pytorch.org/whl/torchaudio-0.7.2-cp37-cp37m-linux_x86_64.whl"}
+torchvision = {file="https://download.pytorch.org/whl/cu110/torchvision-0.8.2%2Bcu110-cp37-cp37m-linux_x86_64.whl"}
+uvicorn = "==0.15.0"
+
+[requires]
+python_version = "3.7"
