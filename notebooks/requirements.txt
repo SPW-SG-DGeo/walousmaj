@@ -1,0 +1,17 @@
+rasterio==1.2
+pyproj==3
+numpy
+geopandas
+ipywidgets
+pandas
+seaborn
+tqdm
+matplotlib
+opencv-python-headless
+ipysankeywidget
+floweaver
+pillow
+geojson
+shapely
+requests
+backoff
