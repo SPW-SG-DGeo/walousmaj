@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>WalOUSMàJ Status</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.js"></script>
+
+</head>
+
+<body>
+    <header
+        style=" display: flex; justify-content: space-between; align-items: center; padding: 20px 10%; background: linear-gradient(
+            32.32deg,#00193c -37.13%,#00193d -36.32%,#0f2b78 -6.9%,#7d3b99 23.36%,#e04094 55.79%,#fa7578 91.07%,#ff8073 127.86%); margin-bottom: 30px;">
+        <a class="logo" href="https://www.aerospacelab.be"><img
+                src="{{ url_for('static', path='images/asl_logo_title.svg') }}" alt="logo" style="cursor: pointer;"></a>
+        <div style="font-family: Montserrat, sans-serif; font-weight: 800; color:#edf0f1">WalOUSMàJ - Status</div>
+        <a class="details" href="/details_table"
+            style="padding: 9px 25px; background-color: #edf0f1; border: none; border-radius: 50px; cursor: pointer; font-family: Montserrat, sans-serif; font-weight: 500; color: #00193c; text-decoration: none;">Details</a>
+    </header>
+    <table id="stage_table" class="display" style="width:100%">
+        <thead>
+            <tr>
+                {% for attribute in attributes %}
+                <th>
+                    {{ attribute.capitalize() }}
+                </th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for stage in stages %}
+            <tr>
+                {% for attribute in attributes %}
+                <td>
+                    {{ stage[attribute] }}
+                </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <script src="https://code.jquery.com/jquery-1.12.4.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#stage_table').DataTable({
+                "columnDefs": [
+                    { "className": "dt-center", "targets": "_all" }
+                ],
+                "pageLength": 25,
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

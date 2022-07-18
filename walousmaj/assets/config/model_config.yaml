@@ -1,0 +1,36 @@
+_BASE_: "deeplab_v3_plus_R_103_os16_mg124_poly_90k_bs16.yaml"
+OUTPUT_DIR: ""
+MODEL:
+  WEIGHTS: walousmaj/assets/model/model_iter2.pth
+  RESNETS:
+    DEPTH: 101
+    NORM: "SyncBN"
+    # NORM: "GN"
+  # BANDS: [Red, Green, Blue, IR, MNH(truncated)]
+  PIXEL_MEAN: [27108.4928, 29066.0223, 26921.2527, 39606.5559, 6.0366]
+  PIXEL_STD: [7118.1259, 6383.3102, 6026.0482, 6578.2162, 6.1443]
+  SEM_SEG_HEAD:
+    NUM_CLASSES: 11
+    IGNORE_VALUE: 255
+    NORM: "SyncBN"
+DATASETS:
+  TRAIN: ("walous_sem_seg_train",)
+  TEST: ("walous_sem_seg_val",)
+SOLVER:
+  BASE_LR: 0.001
+  MOMENTUM: 0.9
+  MAX_ITER: 70000
+  IMS_PER_BATCH: 16
+  CHECKPOINT_PERIOD: 5000
+DATALOADER:
+  NUM_WORKERS: 10
+INPUT:
+  MIN_SIZE_TRAIN: (512, )
+  MIN_SIZE_TRAIN_SAMPLING: "choice"
+  MIN_SIZE_TEST: 512
+  MAX_SIZE_TRAIN: 512
+  MAX_SIZE_TEST: 512
+  CROP:
+    ENABLED: False
+TEST:
+  EVAL_PERIOD: 1000

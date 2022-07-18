@@ -1,0 +1,5 @@
+log_relative_filepath: "walousmaj.log"
+default_model_config_relative_filepath: "assets/config/model_config.yaml"
+database_relative_filepath: "walousmaj_db"
+default_config_relative_filepath : "assets/config/config.yml"
+wallonia_aoi_relative_filepath: "assets/aoi/AD_5_Region_Wal.shp"
