@@ -1,6 +1,6 @@
 # WalousMàJ
 
-WALOUS - Copyright (C) <2022> <Service Public de Wallonie (SWP)>.
+WALOUS - Copyright (C) <2022> <Service Public de Wallonie (SPW)>.
 
 ## Contexte
 Ce package a été développé par [Aerospacelab](https://www.aerospacelab.be/) pour le Service Public de Wallonie dans le cadre de la mise à jour de la carte d'occupation des sols de 2018. Ce marché s'inscrit dans le cadre du projet [Walous](https://geoportail.wallonie.be/walous)
