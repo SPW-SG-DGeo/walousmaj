@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+*.pth filter=lfs diff=lfs merge=lfs -text
+walousmaj/assets/model/model_iter2.pth filter=lfs diff=lfs merge=lfs -text
