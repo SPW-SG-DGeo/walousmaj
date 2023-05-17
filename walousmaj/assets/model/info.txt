@@ -1,1 +1,1 @@
-fichier de poinds du modèle model_iter2.pth nécessite LFS pour être visible
+Le fichier de poids du modèle model_iter2.pth nécessite (peut-être) LFS pour être visible
